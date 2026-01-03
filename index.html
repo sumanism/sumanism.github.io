@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saurav Suman | Software Developer</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Saurav Suman | Software Engineer</title>
+
+  <!-- Global + Page Styles -->
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
@@ -15,45 +20,44 @@
     <span>Saurav Suman</span>
   </div>
 
-    <nav class="nav" id="nav">
-        <a href="#home">Home</a>
-        <a href="about.html">About</a>
+  <nav class="nav" id="nav">
+    <a href="#home">Home</a>
+    <a href="about.html">About</a>
+    <a href="#" class="disabled" title="Coming soon">Portfolio</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="mailto:sauravsuman11021709@gmail.com">Contact</a>
 
-        <!-- Coming soon -->
-        <a href="#" class="disabled" title="Coming soon">Portfolio</a>
-        <a href="#" class="disabled" title="Coming soon">Resume</a>
-        <a href="mailto:sauravsuman11021709@gmail.com">Contact</a>
-    </nav>
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
 
   <div class="menu-toggle" id="menuToggle">
     <i class="fas fa-bars"></i>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-image">
-    <img src="profile.jpeg" alt="Profile Photo" class="profile-img">
+    <img src="profile.jpeg" alt="Saurav Suman profile photo" class="profile-img">
   </div>
 
   <div class="hero-content">
-    <h4>Hi, I'm <span>Software Developer</span></h4>
-    <h1>Saurav Saurav</h1>
+    <h4>Hi, I'm <span>Software Engineer</span></h4>
+    <h1>Saurav Suman</h1>
+
     <p>
-        Software Engineer with experience designing scalable distributed systems using Java, Spring Boot, OOP principles, and design patterns. Skilled in REST APIs, microservices, SQL optimisation, Kafka, virtualisation using Docker/Kubernetes, CI/CD pipelines, and automated testing frameworks. Strong background in solving complex analytical problems..
+      Software Engineer with experience designing scalable distributed systems
+      using Java, Spring Boot, OOP principles, and design patterns. Skilled in REST APIs,
+      microservices, SQL optimization, Kafka, Docker/Kubernetes, CI/CD pipelines,
+      and automated testing frameworks.
     </p>
 
     <div class="buttons">
-        <!-- Download Resume -->
-        <a href="Resume.pdf" class="btn primary" download>
-            Download Resume
-        </a>
-
-        <!-- Contact via Email -->
-        <a href="mailto:sauravsuman11021709@gmail.com" class="btn outline">
-        Contact
-        </a>
+      <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+      <a href="mailto:sauravsuman11021709@gmail.com" class="btn outline">Contact</a>
     </div>
-
 
     <div class="socials">
       <a href="https://www.linkedin.com/in/sauravsuman1102/" target="_blank" aria-label="LinkedIn">
@@ -68,12 +72,12 @@
       <a href="https://leetcode.com/u/darth_-vader/" target="_blank" aria-label="LeetCode">
         <i class="fas fa-code"></i>
       </a>
-
     </div>
   </div>
 </section>
 
-
-<script src="script.js"></script>
+<!-- Scripts -->
+<script src="js/theme.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

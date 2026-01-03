@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #1f1f1f;
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* HEADER */
@@ -29,11 +29,12 @@ body {
 .logo-circle {
   width: 40px;
   height: 40px;
-  background: #007bff;
+  background: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 
 .nav {
@@ -42,19 +43,20 @@ body {
 }
 
 .nav a {
-  color: #ccc;
+  color: var(--text-muted);
   text-decoration: none;
   transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #007bff;
+  color: var(--accent);
 }
 
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  color: var(--text);
 }
 
 /* HERO */
@@ -70,28 +72,28 @@ body {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 8px solid #2e2e2e;
+  border: 8px solid var(--card-bg);
   object-fit: cover;
 }
 
 .hero-content h4 {
-  color: #ccc;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .hero-content h4 span {
-  color: #007bff;
+  color: var(--accent);
 }
 
 .hero-content h1 {
   font-size: 48px;
-  color: #007bff;
+  color: var(--accent);
   margin-bottom: 20px;
 }
 
 .hero-content p {
   max-width: 500px;
-  color: #aaa;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -109,23 +111,25 @@ body {
   transition: 0.3s;
 }
 
+/* PRIMARY BUTTON */
 .btn.primary {
-  background: #007bff;
+  background: var(--accent);
   color: #fff;
 }
 
 .btn.primary:hover {
-  background: #0056b3;
+  background: var(--accent-strong);
 }
 
+/* OUTLINE BUTTON */
 .btn.outline {
-  border: 2px solid #777;
-  color: #fff;
+  border: 2px solid var(--text-muted);
+  color: var(--text);
 }
 
 .btn.outline:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .socials {
@@ -134,13 +138,13 @@ body {
 }
 
 .socials a {
-  color: #ccc;
+  color: var(--text-muted);
   font-size: 18px;
   transition: 0.3s;
 }
 
 .socials a:hover {
-  color: #007bff;
+  color: var(--accent);
 }
 
 /* RESPONSIVE */
@@ -160,7 +164,7 @@ body {
     position: absolute;
     top: 70px;
     right: 60px;
-    background: #2b2b2b;
+    background: var(--bg-secondary);
     flex-direction: column;
     padding: 20px;
     display: none;
@@ -173,4 +177,8 @@ body {
   .menu-toggle {
     display: block;
   }
+}
+.nav a.active {
+  color: var(--accent);
+  font-weight: 600;
 }

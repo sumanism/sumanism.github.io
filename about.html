@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me | Saurav Suman</title>
 
-  <link rel="stylesheet" href="about.css" />
+  <!-- Global + Page Styles -->
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
 
-<header class="about-header">
-  <a href="index.html" class="back-link">
-    <i class="fas fa-arrow-left"></i> Back to Home
-  </a>
+<header class="header">
+  <div class="logo">
+    <span class="logo-circle">S</span>
+    <span>Saurav Suman</span>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="mailto:sauravsuman11021709@gmail.com">Contact</a>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
 </header>
+
 
 <section class="about-hero">
   <h1 class="glow-text">About Me</h1>
-  <p class="subtitle">
-    Software Engineer · Backend Systems · Problem Solver
-  </p>
+  <p class="subtitle">Software Engineer · Backend Systems · Problem Solver</p>
 </section>
 
 <section class="about-content">
@@ -37,9 +58,8 @@
   <div class="glass-card slide-in delay">
     <h2>What I Work On</h2>
     <p>
-      My work revolves around building <strong>Java & Spring Boot microservices</strong>,
-      designing clean REST APIs, and implementing event-driven architectures
-      using Kafka and PostgreSQL to handle high-throughput workloads.
+      I specialize in <strong>Java & Spring Boot microservices</strong>,
+      clean REST API design, and event-driven architectures using Kafka and PostgreSQL.
     </p>
   </div>
 
@@ -57,27 +77,94 @@
     <h2>Side Project Highlight</h2>
     <p>
       Built an <strong>AI-powered Jenkins Failure Analyzer</strong> using Python,
-      FastAPI, and RAG pipelines to automatically analyze build failures and
-      generate actionable diagnostics.
+      FastAPI, and RAG pipelines to automatically analyze build failures
+      and generate actionable diagnostics.
     </p>
   </div>
 
   <div class="glass-card slide-in">
     <h2>What I’m Looking For</h2>
     <p>
-      I’m looking for opportunities where I can work on
-      <strong>backend-heavy systems</strong>, contribute to real production
-      architectures, and continue growing as a software engineer.
+      I’m seeking opportunities to work on <strong>backend-heavy systems</strong>,
+      contribute to production architectures, and grow as a software engineer.
     </p>
   </div>
 
 </section>
+
+<section class="skills-section">
+  <h2 class="skills-title">Technical Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>Backend & Systems</h3>
+
+      <div class="skill">
+        <span>Java / OOP</span>
+        <div class="bar"><div data-level="90"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Spring Boot / Microservices</span>
+        <div class="bar"><div data-level="85"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Kafka / Event-driven Systems</span>
+        <div class="bar"><div data-level="80"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>DevOps & Cloud</h3>
+
+      <div class="skill">
+        <span>Docker</span>
+        <div class="bar"><div data-level="80"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Kubernetes</span>
+        <div class="bar"><div data-level="70"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>CI/CD (Jenkins)</span>
+        <div class="bar"><div data-level="75"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Frontend & Tools</h3>
+
+      <div class="skill">
+        <span>HTML / CSS</span>
+        <div class="bar"><div data-level="75"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div data-level="70"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Git / GitHub</span>
+        <div class="bar"><div data-level="85"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <footer class="about-footer">
   <a href="resume.pdf" target="_blank" class="footer-link">View Resume</a>
   <a href="mailto:sauravsuman11021709@gmail.com" class="footer-link">Contact Me</a>
 </footer>
 
-<script src="about.js"></script>
+<!-- Scripts -->
+<script src="js/theme.js"></script>
+<script src="js/about.js"></script>
 </body>
 </html>

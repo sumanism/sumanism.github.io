@@ -1,0 +1,165 @@
+/* ===== ABOUT PAGE BASE ===== */
+body {
+  background: radial-gradient(circle at top, var(--bg), var(--bg-secondary));
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* HEADER (reuses global header styles from style.css) */
+
+/* HERO */
+.about-hero {
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+
+.glow-text {
+  font-size: 48px;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* CONTENT */
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  gap: 40px;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.glass-card h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.glass-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* LIST */
+.focus-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.focus-list li {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.focus-list li::before {
+  content: "▹";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+/* SKILLS SECTION */
+.skills-section {
+  padding: 80px 20px;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 50px;
+}
+
+.skills-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.skill-card h3 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill span {
+  display: block;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar div {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-strong)
+  );
+  border-radius: 10px;
+  transition: width 1.4s ease;
+}
+
+/* FOOTER */
+.about-footer {
+  text-align: center;
+  padding: 40px;
+}
+
+.footer-link {
+  margin: 0 15px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-strong);
+}
+
+/* ANIMATIONS */
+.slide-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.delay {
+  transition-delay: 0.2s;
+}

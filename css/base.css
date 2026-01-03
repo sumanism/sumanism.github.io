@@ -1,0 +1,31 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #0f172a;
+  --bg-secondary: #020617;
+  --card-bg: rgba(255,255,255,0.06);
+
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --accent: #60a5fa;
+  --accent-strong: #3b82f6;
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-secondary: #ffffff;
+  --card-bg: rgba(0,0,0,0.05);
+
+  --text: #0f172a;
+  --text-muted: #475569;
+
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+}
+
+/* ===== GLOBAL APPLICATION ===== */
+body {
+  background: radial-gradient(circle at top, var(--bg), var(--bg-secondary));
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
