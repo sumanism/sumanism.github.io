@@ -29,3 +29,38 @@ body {
   color: var(--text);
   transition: background 0.4s ease, color 0.4s ease;
 }
+
+/* ===== FIXED BACKGROUND GRAPHICS ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "! @ # < /> { } ; [] & ()";
+  position: fixed;
+  inset: 0;
+  font-family: monospace;
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: -1;
+}
+

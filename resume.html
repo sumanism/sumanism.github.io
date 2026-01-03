@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Saurav Suman</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER (same as other pages) -->
+<header class="header">
+  <div class="logo">
+    <span class="logo-circle">S</span>
+    <span>Saurav Suman</span>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="mailto:sauravsuman11021709@gmail.com">Contact</a>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<!-- RESUME PAGE -->
+<section class="resume-page">
+  <div class="resume-header">
+    <h1>Resume</h1>
+    <p>Software Engineer · Backend Systems</p>
+
+    <a href="resume.pdf" download class="btn primary">
+      <i class="fas fa-download"></i> Download PDF
+    </a>
+  </div>
+
+  <div class="resume-viewer">
+    <iframe 
+      src="resume.pdf"
+      title="Saurav Suman Resume"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="js/theme.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
