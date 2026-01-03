@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  gap: 80px;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 8px solid #2e2e2e;
+  object-fit: cover;
+}
+
+.hero-content h4 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.hero-content h4 span {
+  color: #007bff;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 500px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #0056b3;
+}
+
+.btn.outline {
+  border: 2px solid #777;
+  color: #fff;
+}
+
+.btn.outline:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  color: #ccc;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #007bff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    background: #2b2b2b;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
